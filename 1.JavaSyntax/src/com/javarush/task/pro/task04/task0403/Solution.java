@@ -1,6 +1,5 @@
 package com.javarush.task.pro.task04.task0403;
 
-
 import java.util.Scanner;
 
 /* 
@@ -16,13 +15,16 @@ public class Solution {
                 int number = scanner.nextInt();
                 sum += number;
             } else if (scanner.hasNextLine()) {
-              String string = scanner.nextLine();
+                String string = scanner.nextLine();
                 if (string.equals("ENTER")) {
                     break;
+                } else {
+                    System.out.println("Введите число или ENTER");
                 }
             }
 
         }
         System.out.println(sum);
+        scanner.close();
     }
 }
